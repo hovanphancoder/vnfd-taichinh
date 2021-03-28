@@ -1,0 +1,1 @@
+<p>Developed by <strong><a href="#" target="_blank" style="color: #07395B">JPWEB</a></strong></p>

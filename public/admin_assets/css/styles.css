@@ -1,0 +1,459 @@
+/*
+
+To change this license header, choose License Headers in Project Properties.
+
+To change this template file, choose Tools | Templates
+
+and open the template in the editor.
+
+*/
+
+
+/* 
+
+    Created on : Jul 11, 2018, 10:25:52 PM
+
+    Author     : Tan Pham
+
+*/
+
+.fa-pencil,
+.fa-trash {
+    font-size: 18px;
+}
+
+.seipkon-content-wrapper {
+    min-height: 100%;
+}
+
+#clock .time {
+    font-size: 30px !important;
+}
+
+#content>.page-content {
+    min-height: 100% !important;
+}
+
+.marrig5 {
+    margin-right: 5px;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    width: 16px!important;
+}
+
+
+/*#sidebar{
+
+    width: 190px !important;
+
+}
+
+#content{
+
+    width: calc(100% - 190px) !important;
+
+}*/
+
+.alert {
+    margin-bottom: 0px !important;
+}
+
+.page-box {
+    margin-top: 20px;
+}
+
+.pagination {
+    margin-top: 0px !important;
+}
+
+.navi {
+    text-align: center;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    text-transform: none !important;
+}
+
+#input_feedback1,
+#textare_feedback {
+    text-align: right;
+}
+
+.seipkon-breadcromb-left a {
+    color: #03a9f3 !important;
+    font-size: 14px;
+    display: block;
+}
+
+.seipkon-breadcromb-left h3 {
+    float: left;
+    display: block;
+    margin-right: 30px;
+}
+
+.margin0 {
+    margin-bottom: 0;
+}
+
+.abt--center {
+    text-align: center !important;
+}
+
+.abt--right {
+    text-align: right !important;
+}
+
+.red {
+    color: red !important;
+}
+
+.content-header {
+    margin-top: 15px;
+}
+
+.content-header .content-header-left {
+    float: left;
+}
+
+.content-header .content-header-right {
+    float: right;
+}
+
+.blockpro {
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.select2-container {
+    padding: 0;
+}
+
+.blockpro .select2-choices {
+    min-height: 38px!important;
+    border: 0!important;
+}
+
+.order-table .table>tbody>tr>td {
+    text-align: right;
+}
+
+#discount-total {
+    float: right;
+}
+
+.title-table {
+    background: #ddd;
+    padding: 8px;
+    height: 34px;
+}
+
+.select2-search-field {
+    width: 1px;
+}
+
+div.required .control-label:not(span):before,
+td.required:before {
+    content: '* ';
+    color: #F00;
+    font-weight: bold;
+}
+
+.table thead>tr>td,
+.table tbody>tr>td {
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.table thead td {
+    font-weight: bold;
+}
+
+.table thead>tr>td,
+.table tfoot>tr>td {
+    background: #fff;
+}
+
+button.btn>i {
+    margin-right: 0;
+}
+
+.btn-newbie {
+    border-radius: 3px;
+    border: 1px solid #AB8CCD;
+}
+
+table#option-value td img {
+    width: 100px;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-tabs {
+    margin-bottom: 25px;
+}
+
+.tab-pane .form-group {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+}
+
+#seipkkon_tab_content #tab-option .form-group {
+    display: flex;
+}
+
+#seipkkon_tab_content a[aria-expanded="true"]:before,
+.nav-pills a:before {
+    content: '';
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+    background-color: #337ab7!important;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.nav-pills a {
+    color: #337ab7;
+}
+
+body .select2-container--default .select2-selection--single {
+    height: 40px;
+}
+
+body .select2-container--default .select2-selection--single .select2-selection__arrow {
+    margin-top: 5px;
+}
+
+.block-trash {
+    background-color: #fc2d42;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.block-trash .fa-trash {
+    font-size: 14px;
+}
+
+.opva {
+    margin-bottom: 4px;
+}
+
+.form-group select {
+    border: 1px solid #ddd;
+    color: #212121;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.order-page a[aria-expanded="false"]:before,
+.order-page a[aria-expanded="true"]:before {
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.table.bor0>tbody>tr>td {
+    border-top: 0;
+}
+
+.seipkon-breadcromb-right-no ul li {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.access .modal-header .close {
+    margin-top: -25px;
+}
+
+.select2-selection__choice {
+    color: #FFF !important;
+    background-color: #0e7dc5 !important;
+}
+
+.modal-title {
+    display: inline;
+}
+
+.modal-dialog {
+    width: 800px;
+}
+
+.form-gender.form-status label,
+.create-page-left input,
+.create-page-right input {
+    cursor: pointer;
+}
+
+.form-gender.form-status {
+    padding: 5px 0px;
+}
+
+.create-page-left input,
+.create-page-right input {
+    height: 40px;
+}
+
+#group_receive_customer {
+    display: none;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #DDD;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #DDD;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #DDD;
+}
+
+.form-gender .form-group.form-radio {
+    width: 100%;
+}
+
+.create-page-right input[type="radio"] {
+    width: auto;
+    height: 20px;
+}
+
+.tab-pane .form-group {
+    padding: 10px 0;
+}
+
+.create-page-right .form-wrap .form-group.form-radio,
+.create-page-right .form-wrap .form-group.form-checkbox {
+    padding: 10px 10px 5px 10px;
+}
+
+.list-unstyled li a {
+    padding: 5px 10px 5px 10px;
+}
+
+.panel-body {
+    padding: 0;
+}
+
+.form-example {}
+
+.custom_scroll_y {
+    height: 150px;
+    overflow-y: scroll;
+}
+
+.custom_scroll_y .form-group>input[type=checkbox]+label {
+    width: 100%;
+    text-align: left;
+}
+
+.form-example>h5 {
+    color: #333;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px dashed #999;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-selection .select2-selection--single,
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple {
+    height: auto!important;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid #aaa 1px!important;
+}
+
+.coupon_item {
+    background-color: #ddd;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+.single-profile-bio .product_gift ul li {
+    float: left;
+    padding-right: 10px;
+}
+
+.single-profile-bio .product_gift ul li h6 {
+    margin-top: 15px;
+}
+
+#sidebarHome {
+    background: transparent !important;
+    color: #878787 !important;
+    margin: 16px 10px !important;
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: 2px solid #878787 !important;
+    font-size: 17px;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+#sidebarHome:hover {
+    color: #FFF !important;
+    border: 2px solid #FFF !important;
+}
+
+.table thead>tr>td,
+.table tbody>tr>td.item_feature {
+    text-align: center;
+    color: #179a07;
+    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .form-horizontal .control-label {
+        text-align: right;
+        margin-bottom: 0;
+        padding-top: 9px;
+    }
+    .col-sm-1,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12 {
+        float: left;
+    }
+    label.control-label {
+        text-align: right;
+    }
+}

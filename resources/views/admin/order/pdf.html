@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+  body{font-size:19px;line-height: 27px;}
+  .content{margin:100px;}
+  .block-user{margin: 20px 0;width: 100%;float: left;}
+  .block-left,.block-right{width:50%;float:left;line-height: 25px;display: inline-block;}
+  .block-user1 .block-left{font-weight: bold;}
+  .block-user1 .block-left div:first-child,.block-right div:first-child{font-weight: normal;text-decoration: underline;}
+  .table{width:100%;border-spacing: 0;}
+  .table thead th{padding:7px;border-bottom: 6px double #000;background:#ddd;}
+  .table tbody td{padding: 8px 5px;}
+  .table tbody .padd td{padding: 20px 5px;}
+  .table tbody .bor td{border-top: 2px solid #000;}
+  .table tbody .paddsub td{padding:2px 7px;}
+  .table tbody .bor-end td{border-top: 2px solid #000;border-bottom: 6px double #000;}
+  .kyten{text-transform: uppercase;}
+  .block-dieukhoan{font-weight:bold;}
+  .block-dieukhoan .dieukhoan{text-decoration: underline;}
+  .left{text-align:left;}
+  .right{text-align:right;}
+  .center{text-align:center;}
+  .bold{font-weight:bold;}
+  .top{vertical-align: top;}
+  </style>
+  </style>
+  <body>
+	<div class="content">
+		<h1>Sales Quotation</h1>
+		<div class="block-user1">
+			<div class="block-left">
+				<div>TO</div>
+				<div>name</div>
+				<div>address</div>
+				<div>tel</div>
+				<div>fax</div>
+				<div>contact</div>
+			</div>
+			<div class="block-right">
+				<div>FROM</div>
+				<div>Cty TNHH Thương Mại Dịch Vụ Quốc Tế M&T </div>
+				<div>46 Phan Đình Phùng,P.Tân Thành,Q.Tân Phú, Tp.HCM </div>
+				<div>ĐT +84 8 6656 0610</div>
+				<div>MST 0313634290</div>
+				<div>NH Vietcombank Sài Gòn</div>
+				<div>69 Bùi Thị Xuân, P.Phạm Ngũ Lão, Q.1, Tp.HCM</div>
+				<div>Số TK: 0331000453851</div>
+			</div>
+		</div>
+		<br />
+		<div class="block-user">
+			<div class="block-left">
+				<div>Ngày báo giá: &nbsp;&nbsp;&nbsp;&nbsp; 22/5/2018 </div>
+			</div>
+			<div class="block-right">
+				<div>Mã KH: A013-000800</div>
+				<div>Số BG: <b>A013-000800</b></div>
+			</div>
+		</div>
+		<br />
+		<table class="table">
+			<tr>
+				<td class="bold top">
+					
+					<div>TO</div>
+					<div>{!!$customer['name']!!}</div>
+					<div>{!!$customer['address']!!}</div>
+					<div>{!!$customer['tel']!!}</div>
+					<div>{!!$customer['fax']!!}</div>
+					<div>{!!$customer['contact']!!}</div>
+				
+				</td>
+				<td>
+					
+					<div>FROM</div>
+					<div>Cty TNHH Thương Mại Dịch Vụ Quốc Tế M&T </div>
+					<div>46 Phan Đình Phùng,P.Tân Thành,Q.Tân Phú, Tp.HCM </div>
+					<div>ĐT +84 8 6656 0610</div>
+					<div>MST 0313634290</div>
+					<div>NH Vietcombank Sài Gòn</div>
+					<div>69 Bùi Thị Xuân, P.Phạm Ngũ Lão, Q.1, Tp.HCM</div>
+					<div>Số TK: 0331000453851</div>
+				
+				</td>
+			</tr>
+			<tr>
+				<td>
+					
+					<div>Ngày báo giá: &nbsp;&nbsp;&nbsp;&nbsp; <?php echo date('d/m/Y');?> </div>
+				
+				</td>
+				<td>
+				
+					<div>Mã KH: {!!$customer['customer_id']!!}</div>
+					<div>Số BG: <b>A013-000800</b></div>
+					
+				</td>
+			</tr>
+		</table>
+		<table class="table">
+			<thead>
+			  <tr>
+				<th>Stt</th>
+				<th>Mã</th>
+				<th>Mô tả</th>  
+				<th>ĐVT</th>
+				<th>SL</th>
+				<th class="right">Đơn giá</th>
+				<th class="right">T.Tiền(VND)</th>
+			  </tr>
+			</thead>
+		  
+			<tbody>
+			  <tr class="padd">
+				<td>1</td>
+				<td>14-132-423</td>
+				<td><b>Túi dập mẫu thường</b></td>
+				<td class="center">hộp</td>
+				<td class="center">1</td>
+				<td class="right">1.500.000</td>
+				<td class="right">1.500.000</td>
+			  </tr>
+			  <tr class="bor paddsub">
+				<td colspan="6">TỔNG GIÁ TRỊ HÀNG HOÁ, VND</td>
+				<td class="right">3.7990.000</td>
+			  </tr>
+			  <tr class="paddsub">
+				<td colspan="6">THUẾ GTGT, 10%</td>
+				<td class="right">379.900</td>
+			  </tr>
+			  <tr class="bor-end">
+				<td colspan="6"><b>TỔNG GIÁ TRỊ ĐƠN HÀNG, VND</b></td>
+				<td class="right"><b>3.7990.000</b></td>
+			  </tr>
+			</tbody>
+		  
+		</table>
+		<br/><br/>
+		<div class="block-dieukhoan">
+			<div class="dieukhoan">Điều khoản</div>
+			<p>
+			Thanh toán (CK) 100% : 0% tạm ứng và 15 ngày sau khi xuất hoá đơn <br/>
+			Giao hàng 08-10 tuần kể từ ngày nhận tiền thanh toán tạm ứng <br/>
+			Hàng được giao tại quý công ty không bao gồm phí lắp đặt <br/>
+			Bảo hành 0 tháng, không bảo hành phụ kiện và vật tư tiêu hao <br/>
+			Hiệu lực báo giá 30 ngày kể từ ngày báo giá
+			</p>
+		</div>
+		<br/>
+		<br/>
+		<div>TRÂN TRỌNG</div>
+		
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		--------------------------------------
+		<div class="kyten">NGUYỄN VŨ HOÀNG DUY</div>
+		<div>+84 902 298 372</div>
+	</div>
+    
+  </body>
+</html>

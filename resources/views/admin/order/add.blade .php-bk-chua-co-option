@@ -1,0 +1,364 @@
+@extends('admin.dashboard')
+@section('title', 'Page Title')
+@section('assets')
+@endsection
+@section('content')
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- Breadcromb Row Start -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcromb-area">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="seipkon-breadcromb-left">
+                                <h1>Add order</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="seipkon-breadcromb-right">
+                                <ul>
+                                    <li><a href="{!!url('admin/dashboard')!!}">home</a></li>
+                                    <li><a href="{!!url('admin/order/list')!!}">Order</a></li>
+                                    <li>Add Order</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Breadcromb Row -->
+
+        @if(Session::has('status'))
+                <!--<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>-->
+        <div class="alert alert-success fade in alert-dismissible" style="margin-top:18px;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+            {!!Session::get('status')!!}
+        </div>
+        @endif
+
+        <!-- Pages Table Row Start -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-box">
+                    <form action="{!!action('Admin\OrderController@doAddOrder')!!}" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="_token" value="{!!csrf_token()!!}">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="create-page-left">
+                                    <div class="form-group">
+                                        <div class="create-page-left">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="single-profile-bio">
+                                                        <h3>Thông Tin Khách Hàng</h3>
+                                                        
+														<div class="form-group">
+                                                            <label>Tên khách hàng:</label>
+                                                            
+															<select placeholder="Chọn hoặc nhập tên để tìm khach hang" multiple data-plugin-selectTwo class="form-control" id="name" name="name"  >
+																@foreach ($customers as $customer)  
+																
+																<option value="{{$customer->id}}" >{{$customer->name}} </option>                                    @endforeach								
+															</select>
+															<br/>
+                                                            <p id="input_feedback1"></p>
+                                                        </div>
+														<div class="form-group">
+                                                            <label>Địa Chỉ:</label>
+                                                            <textarea id="seotitle" class="form-control" name="address" placeholder="Địa Chỉ" ></textarea>
+                                                            <p id="input_feedback1"></p>
+                                                        </div>
+														<div class="form-group">
+                                                            <label>Điện Thoại:</label>
+                                                            <input id="phone" type="text" name="phone" placeholder="Điện Thoại" value="" ><br/>
+                                                            <p id="input_feedback1"></p>
+                                                        </div>
+														<div class="form-group">
+                                                            <label>Email:</label>
+                                                            <input id="email" type="text" name="email" placeholder="Email" value="" ><br/>
+                                                            <p id="input_feedback1"></p>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="single-profile-bio">
+                                                        <h3>Thông Tin Đơn Hàng</h3>
+														<div class="form-group">
+                                                            <label>Ngày Đặt Hàng:</label>
+                                                            <input id="order_date" type="text" name="order_date" placeholder="d/m/Y" value="" class='datepicker'><br/>
+                                                            <p id="input_feedback1"></p>
+                                                        </div>
+														<div class="form-group">
+                                                            <label>Ghi Chú:</label>
+                                                            <textarea id="notes" class="form-control" name="notes" placeholder="Ghi Chú" ></textarea>
+                                                            <p id="input_feedback1"></p>
+                                                        </div>
+														<div class="form-group">
+															<label class="control-label" for="select">Phương Thức Thanh Toán:</label>
+															<select class="form-control" id="select" name="payment_method">
+																<option value="Chuyển Khoản" >Chuyển Khoản</option>
+																<option value="Tiền Mặt" >Tiền Mặt</option>
+															</select>
+														</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-responsive">
+                                        <div class="single-profile-bio">
+                                            <h3>Thông Tin Sản Phẩm</h3>
+											<input type="hidden" id="getnum" name="getnum" value="1" class="form-control"/>
+											<div class="title-table">
+												<div class="form-group col-md-4">		
+													<label>Tên sản phẩm </span></label>
+												</div>
+												<div class="form-group col-md-2">		
+													<label>Số lượng </span></label>
+												</div>
+												<div class="form-group col-md-3">		
+													<label>Đơn giá </span></label>
+												</div>
+												<div class="form-group col-md-3">		
+													<label>Thành tiền </span></label>
+												</div>
+											</div>
+											<div class="blockpropa">
+												<div class="blockpro block1">
+													<div class="form-group col-md-4">               
+														<select placeholder="Chọn hoặc nhập tên để tìm sản phẩm"  data-plugin-selectTwo class="form-control" data-id="1" id="product1" name="product[]" >									
+														@foreach ($products as $product)  
+														<?php
+														
+															if($product->promotion_price == '') $price = $product->unit_price;
+															if( $product->promotion_price > 100) $price =  $product->promotion_price;
+															if($product->promotion_price < 100 && $product->promotion_price > 0) $price = ($product->unit_price * $product->promotion_price)/100;  echo $price;
+														?>														
+														<option value="{{$product->id}}" data-price="{{$price}}">{{$product->name}} </option>                                    @endforeach								
+														</select>
+
+														
+													</div>							
+													<div class="form-group col-md-2">
+														<input id="sl1" type="number" data-id="1" min="1" name="sl[]" value="1" class="form-control" placeholder="Số lượng" required/>
+													</div>
+													<div class="form-group col-md-3">
+														<input id="dg1" type="number" min="1" name="dg[]" value="" class="form-control" readonly/>
+													</div>
+													<div class="form-group col-md-3">	
+														<input id="tt1" type="number" min="1" name="tt[]" value="" class="form-control thanhtien" readonly/>
+													</div>
+												</div>
+												</div>
+												<div class="blockaddpro">
+												</div>
+												<div class="form-group " style="width:100%;display: inline-block;">
+													<div type="text" id="addpro" class="btn btn-primary" value="Thêm sản phẩm">Thêm sản phẩm</div>
+													<div type="text" id="subpro" class="btn btn-primary" value="Bớt sản phẩm">Bớt sản phẩm</div>
+												</div>
+												<div class="col-md-8 col-md-offset-4 order-table">
+													 <table class="table text-right">
+														<tbody>
+														   <tr id="subtotal">
+															  <td><span class="bold">Tổng :</span>
+															  </td>
+															  <td class="subtotal"><b>0.000 </b>đ<input type="hidden" id="inputsubtotal" name="subtotal" value="0"></td>
+														   </tr>
+														   <tr id="discount_area">
+															  <td>
+																 <div class="row">
+																	<div class="col-md-7">
+																	   <span class="bold">
+																		Chiếu khấu                         </span>
+																	</div>
+																	<div class="col-md-5">
+																		<div class="input-group" id="discount-total">
+
+																			<input type="number" value="0" class="form-control pull-left input-discount" min="0" id="discount" name="discount" aria-invalid="false">
+
+																			
+																		</div>
+																	</div>
+																 </div>
+															  </td>
+															  <td class="discount-total"><b>0.000 </b>đ</td>
+														   </tr>
+														   
+														   <tr>
+															  <td><span class="bold">Thành tiền :</span>
+															  </td>
+															  <td class="total"><b>0.000 </b>đ<input type="hidden" id="inputtotal" name="total" value="0"></td>
+														   </tr>
+														</tbody>
+													 </table>
+												  </div>
+                                            
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            
+
+
+                        </div>
+                        <div class="form-layout-submit">
+                            <p>
+                                <button type="submit" class="btn btn-success" ><i class="fa fa-check"></i>Update</button>
+                                <a class="btn btn-default" href="{!!url('admin/order/list')!!}" role="button"><i class="fa fa-chevron-left"></i> Back</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <!-- End Pages Table Row -->
+
+    </div>
+</div>
+
+<!-- Footer Area Start -->
+<footer class="seipkon-footer-area">
+    @include('admin/layouts/footer')
+</footer>
+<!-- End Footer Area -->
+@endsection
+@section('assetjs')
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+  $( "#order_date" )
+        .datepicker({
+          changeMonth: true,
+          changeYear: true,
+		  dateFormat: "dd-mm-yy",
+          numberOfMonths: 1
+        });
+	$( "#duedate" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+		dateFormat: "dd-mm-yy",
+        numberOfMonths: 1
+      });
+	 $.datepicker.regional["vi-VN"] =
+	{
+		closeText: "Đóng",
+		prevText: "Trước",
+		nextText: "Sau",
+		currentText: "Hôm nay",
+		monthNames: ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư", "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám", "Tháng chín", "Tháng mười", "Tháng mười một", "Tháng mười hai"],
+		monthNamesShort: ["Một", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy", "Tám", "Chín", "Mười", "Mười một", "Mười hai"],
+		dayNames: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+		dayNamesShort: ["CN", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"],
+		dayNamesMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+		weekHeader: "Tuần",
+		dateFormat: "dd/mm/yy",
+		firstDay: 1,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: ""
+	};
+
+	$.datepicker.setDefaults($.datepicker.regional["vi-VN"]);
+	$("#addpro").click(function(){
+	  
+	  var getnum = $('#getnum').val();
+	  getnum = parseInt(getnum) + 1;
+	  html = '<div class="blockpro block'+getnum+'"><div class="form-group col-md-4"><select placeholder="Chọn hoặc nhập tên để tìm sản phẩm" multiple data-plugin-selectTwo class="form-control" data-id="'+getnum+'" id="product'+getnum+'" name="product[]" class="form-control"><?php foreach($product1 as $product){ ?> <option data-price="<?php 
+		if($product->promotion_price == '') $price = $product->unit_price;
+		if($product->promotion_price > 100 ) $price =  $product->promotion_price;
+		if($product->promotion_price < 100 && $product->promotion_price > 0) $price = ($product->unit_price * $product->promotion_price)/100; 
+		echo $price; ?>" value="<?php echo $product->id; ?>" ><?php echo $product->name; ?>  </option><?php } ?> </select></div><div class="form-group col-md-2"><input id="sl'+getnum+'" data-id="'+getnum+'" type="number" min="1" name="sl[]" value="1" class="form-control" required/></div><div class="form-group col-md-3"><input id="dg'+getnum+'" type="number" min="1" name="dg[]" value="" class="form-control" readonly/></div><div class="form-group col-md-3">	<input id="tt'+getnum+'" type="number" min="1" name="tt[]" value="" class="form-control thanhtien" readonly/></div></div>';
+	 
+	  $('.blockaddpro').append(html);
+	  $('#getnum').val(getnum);
+	  $('#product'+getnum).select2();
+	});
+	$("#subpro").click(function(){
+		$('.blockaddpro .blockpro:last-child').remove();
+		subtotal();
+	});
+	function formatprice(num) {
+		// var p = num.toFixed(0).split(".");
+		// return  p[0].split("").reverse().reduce(function(acc, num, i, orig) {
+			// return  num=="-" ? acc : num + (i && !(i % 3) ? "." : "") + acc;
+		// }, "");
+		
+		return num;
+	}
+	function subtotal() {
+		var total = 0;
+		var thanhtien = document.getElementsByClassName('thanhtien');
+		for (var i = 0; i < thanhtien.length; ++i) {
+		if (!isNaN(parseInt(thanhtien[i].value)) )
+		total += parseInt(thanhtien[i].value);  
+		}
+		$('#inputsubtotal').val(total);
+		$('.subtotal b').html(total);
+		
+		var discount = $('#discount').val();
+		if(discount >0 && discount<100){
+			var end = total - (total*discount)/100;
+			var discounttotal = (total*discount)/100;
+			$('.discount-total b').html(discounttotal);
+		}
+		else{ var end = total - discount;
+			$('.discount-total b').html(formatprice(discount));
+		}
+		
+		$('#inputtotal').val(end);
+		$('.total b').html(formatprice(end));
+	}
+	$(document).on("change",'#discount', function(){
+	   
+	   var sub_total = $('#inputsubtotal').val();
+	   var discount = $('#discount').val();
+		if(discount >0 && discount<100){
+			var discounttotal = (sub_total*discount)/100;
+			$('.discount-total b').html(formatprice(discounttotal));
+		}
+		else $('.discount-total b').html(formatprice(discount));
+		 subtotal();
+	});
+	$(document).on("change",'input[name^=sl]', function(){
+		var id = $(this).attr('data-id');
+		var sl = $(this).val();
+		var dg = $('#dg'+id+'').val();
+		$('#tt'+id+'').val(formatprice(dg*sl));
+		subtotal();
+	});
+	$(document).on("change",'select[name^=product]', function(){
+	   
+	     var id = $(this).attr('data-id');console.log(id);
+		 var data = $(this).find(':selected').attr('data-price');console.log(data);
+		 $('#dg'+id+'').val(formatprice(data));
+		 var sl = $('#sl'+id+'').val();
+	     $('#tt'+id+'').val(formatprice(parseInt(data)*parseInt(sl)));
+		 subtotal();
+	});
+	
+  
+  </script>
+  <script type="text/javascript">
+       	
+		$(document).ready(function() {			
+			$('#name').select2({
+			});		
+			$('#product1').select2({
+			});		
+		});
+    </script>
+	<link rel="stylesheet" href="{{asset('admin_assets/plugins/select2/css/select2.min.css')}}">
+	<script src="{{asset('admin_assets/plugins/select2/js/select2.full.js')}}"></script>
+@endsection

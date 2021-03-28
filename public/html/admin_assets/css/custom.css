@@ -1,0 +1,9 @@
+.feature__image {
+    width: 100%;
+    text-align: center;
+    background-color: #c3c3c3;
+}
+
+.feature__image img {
+    width: 50%;
+}

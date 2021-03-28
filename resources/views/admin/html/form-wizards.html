@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<!-- Mirrored from themescare.com/demos/seipkon-admin-template/form-wizards.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Jul 2018 11:08:45 GMT -->
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="Seipkon is a Premium Quality Admin Site Responsive Template" />
+      <meta name="keywords" content="admin template, admin, admin dashboard, cms, Seipkon Admin, premium admin templates, responsive admin, panel, software, ui, web app, application" />
+      <meta name="author" content="Themescare">
+      <!-- Title -->
+      <title>Seipkon - Bootstrap Admin Template</title>
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+      <!-- Animate CSS -->
+      <link rel="stylesheet" href="assets/css/animate.min.css">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="assets/plugins/bootstrap/bootstrap.min.css">
+      <!-- Font awesome CSS -->
+      <link rel="stylesheet" href="assets/plugins/font-awesome/font-awesome.min.css">
+      <!-- Themify Icon CSS -->
+      <link rel="stylesheet" href="assets/plugins/themify-icons/themify-icons.css">
+      <!-- Perfect Scrollbar CSS -->
+      <link rel="stylesheet" href="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css">
+      <!-- Daterange CSS -->
+      <link rel="stylesheet" href="assets/plugins/daterangepicker/css/daterangepicker.css">
+      <!-- Toggles CSS -->
+      <link rel="stylesheet" href="assets/plugins/jquery-toggle/css/toggles-full.css">
+      <!-- Select2 CSS -->
+      <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+      <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+      <!-- Main CSS -->
+      <link rel="stylesheet" href="assets/css/seipkon.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="assets/css/responsive.css">
+   </head>
+   <body>
+       
+      <!-- Start Page Loading -->
+      <div id="loader-wrapper">
+         <div id="loader"></div>
+         <div class="loader-section section-left"></div>
+         <div class="loader-section section-right"></div>
+      </div>
+      <!-- End Page Loading -->
+       
+      <!-- Wrapper Start -->
+      <div class="wrapper">
+         <!-- Main Header Start -->
+         <header class="main-header">
+             
+            <!-- Logo Start -->
+            <div class="seipkon-logo">
+               <a href="index-2.html">
+               <img src="assets/img/logo.png" alt="logo">
+               </a>
+            </div>
+            <!-- Logo End -->
+             
+            <!-- Header Top Start -->
+            <nav class="navbar navbar-default">
+               <div class="container-fluid">
+                  <div class="header-top-section">
+                     <div class="pull-left">
+                         
+                        <!-- Collapse Menu Btn Start -->
+                        <button type="button" id="sidebarCollapse" class=" navbar-btn">
+                        <i class="fa fa-bars"></i>
+                        </button>
+                        <!-- Collapse Menu Btn End -->
+                         
+                        <!-- Header Top Search Start -->
+                        <div class="header-top-search">
+                           <form>
+                              <input type="search" placeholder="Search..." >
+                              <button type="submit" ><i class="fa fa-search"></i></button>
+                           </form>
+                        </div>
+                        <!-- Header Top Search End -->
+                         
+                     </div>
+                     <div class="header-top-right-section pull-right">
+                        <ul class="nav nav-pills nav-top navbar-right">
+                            
+                           <!-- Full Screen Btn Start -->
+                           <li>
+                              <a href="#"  id="fullscreen-button">
+                              <i class="fa fa-arrows-alt"></i>
+                              </a>
+                           </li>
+                           <!-- Full Screen Btn End -->
+                            
+                           <!-- Message Toggle Start -->
+                           <li class="dropdown">
+                              <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                              <i class="fa fa-envelope-o"></i>
+                              <span>5</span>
+                              </a>
+                              <div class="message-box dropdown-menu animated bounceIn">
+                                 <div class="message-header">
+                                    <h4>5 new Message</h4>
+                                    <a href="#">mark as read</a>
+                                 </div>
+                                 <div class="message-body">
+                                    <ul>
+                                       <li>
+                                          <a href="#" class="single-message">
+                                             <div class="message-img">
+                                                <img src="assets/img/msg-4.png" alt="message" />
+                                                <span class="online-message"></span>
+                                             </div>
+                                             <div class="message-txt">
+                                                <h4>David Johnson</h4>
+                                                <p>I like your portfolio, let's start.</p>
+                                                <span>56 seconds ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="single-message">
+                                             <div class="message-img">
+                                                <img src="assets/img/msg-1.png" alt="message" />
+                                                <span class="busy-message"></span>
+                                             </div>
+                                             <div class="message-txt">
+                                                <h4>Margaret Govan</h4>
+                                                <p>Can we have call in this week ?</p>
+                                                <span>14 hourse ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="single-message">
+                                             <div class="message-img">
+                                                <img src="assets/img/msg-3.png" alt="message" />
+                                                <span class="online-message"></span>
+                                             </div>
+                                             <div class="message-txt">
+                                                <h4>Emanual Doe</h4>
+                                                <p>A National Book Award Finalist An...</p>
+                                                <span>a day ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="single-message">
+                                             <div class="message-img">
+                                                <img src="assets/img/msg-2.png" alt="message" />
+                                                <span class="away-message"></span>
+                                             </div>
+                                             <div class="message-txt">
+                                                <h4>Eric Alsobrook</h4>
+                                                <p>A National Book Award Finalist An...</p>
+                                                <span>2 days ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="message-footer">
+                                    <a href="#"><i class="fa fa-angle-down"></i>see all messages</a>
+                                 </div>
+                              </div>
+                           </li>
+                           <!-- Message Toggle Start -->
+                            
+                           <!-- Notification Toggle Start -->
+                           <li class="dropdown">
+                              <a class="dropdown-toggle cart-icon" href="#" data-toggle="dropdown">
+                              <i class="fa fa-bell-o"></i>
+                              <span>3</span>
+                              </a>
+                              <div class="notification-box dropdown-menu animated bounceIn">
+                                 <div class="notification-header">
+                                    <h4>3 new notification</h4>
+                                    <a href="#">clear all</a>
+                                 </div>
+                                 <div class="notification-body">
+                                    <ul>
+                                       <li>
+                                          <a href="#" class="single-notification">
+                                             <div class="notification-img bg_yellow">
+                                                <i class="fa fa-envelope-o"></i>
+                                             </div>
+                                             <div class="notification-txt">
+                                                <h4>you have received an email</h4>
+                                                <span>56 seconds ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="single-notification">
+                                             <div class="notification-img bg_green">
+                                                <i class="fa fa-check"></i>
+                                             </div>
+                                             <div class="notification-txt">
+                                                <h4>Successful transaction of $210</h4>
+                                                <span>1 minutes ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="single-notification">
+                                             <div class="notification-img bg_red">
+                                                <i class="fa fa-thumbs-up"></i>
+                                             </div>
+                                             <div class="notification-txt">
+                                                <h4>33 pending post for approval</h4>
+                                                <span>3 minutes ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="single-notification">
+                                             <div class="notification-img bg_blue">
+                                                <i class="fa fa-comments-o"></i>
+                                             </div>
+                                             <div class="notification-txt">
+                                                <h4>2 new comments found</h4>
+                                                <span>5 minutes ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="single-notification">
+                                             <div class="notification-img bg_green">
+                                                <i class="fa fa-truck "></i>
+                                             </div>
+                                             <div class="notification-txt">
+                                                <h4>order details confirmation</h4>
+                                                <span>43 seconds ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="single-notification">
+                                             <div class="notification-img bg_yellow">
+                                                <i class="fa fa-envelope-o"></i>
+                                             </div>
+                                             <div class="notification-txt">
+                                                <h4>you have received an email</h4>
+                                                <span>56 seconds ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <a href="#" class="single-notification">
+                                             <div class="notification-img bg_green">
+                                                <i class="fa fa-check"></i>
+                                             </div>
+                                             <div class="notification-txt">
+                                                <h4>Successful transaction of $210</h4>
+                                                <span>1 minutes ago</span>
+                                             </div>
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="notification-footer">
+                                    <a href="#"><i class="fa fa-angle-down"></i>see all notification</a>
+                                 </div>
+                              </div>
+                           </li>
+                           <!-- Notification Toggle End -->
+                            
+                           <!-- Profile Toggle Start -->
+                           <li class="dropdown">
+                              <a class="dropdown-toggle profile-toggle" href="#" data-toggle="dropdown">
+                                 <img src="assets/img/avatar.jpg" class="profile-avator" alt="admin profile" />
+                                 <div class="profile-avatar-txt">
+                                    <p>Jhon Doe</p>
+                                    <i class="fa fa-angle-down"></i>
+                                 </div>
+                              </a>
+                              <div class="profile-box dropdown-menu animated bounceIn">
+                                 <ul>
+                                    <li><a href="#"><i class="fa fa-user"></i> view profile</a></li>
+                                    <li><a href="#"><i class="fa fa-pencil-square-o"></i> Edit profile</a></li>
+                                    <li><a href="#"><i class="fa fa-flash"></i> Activity Log</a></li>
+                                    <li><a href="#"><i class="fa fa-wrench"></i> Setting</a></li>
+                                    <li><a href="#"><i class="fa fa-power-off"></i> sign out</a></li>
+                                 </ul>
+                              </div>
+                           </li>
+                           <!-- Profile Toggle End -->
+                            
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </nav>
+            <!-- Header Top End -->
+             
+         </header>
+         <!-- Main Header End -->
+          
+         <!-- Sidebar Start -->
+         <aside class="seipkon-main-sidebar">
+            <nav id="sidebar">
+                
+               <!-- Sidebar Profile Start -->
+               <div class="sidebar-profile clearfix">
+                  <div class="profile-avatar">
+                     <img src="assets/img/avatar.jpg" alt="profile" />
+                  </div>
+                  <div class="profile-info">
+                     <h3>Jhon Doe</h3>
+                     <p>Welcome Admin !</p>
+                  </div>
+               </div>
+               <!-- Sidebar Profile End -->
+                
+               <!-- Menu Section Start -->
+               <div class="menu-section">
+                  <h3>General</h3>
+                  <ul class="list-unstyled components">
+                     <li>
+                        <a href="index-2.html">
+                        <i class="fa fa-dashboard"></i>
+                        Dashboard
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#ecommerce" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-shopping-cart"></i>
+                        e-Commerce
+                        </a>
+                        <ul class="collapse list-unstyled" id="ecommerce">
+                           <li><a href="product.html">all products</a></li>
+                           <li><a href="add-product.html">add new product</a></li>
+                           <li><a href="edit-product.html">Edit product</a></li>
+                           <li><a href="order-list-product.html">product order list</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#createpage" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-file-text-o"></i>
+                        pages
+                        </a>
+                        <ul class="collapse list-unstyled" id="createpage">
+                           <li><a href="pages.html">all pages</a></li>
+                           <li><a href="create-page.html">create a page</a></li>
+                           <li><a href="edit-page.html">Edit Page</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#apps" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-th"></i>
+                        Advance apps
+                        </a>
+                        <ul class="collapse list-unstyled" id="apps">
+                           <li><a href="chatting.html">Chatting</a></li>
+                           <li><a href="notes.html">notes</a></li>
+                           <li><a href="apps-contact-list.html">Contact/Employee</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#mail" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-envelope"></i>
+                        mailbox
+                        </a>
+                        <ul class="collapse list-unstyled" id="mail">
+                           <li><a href="compose.html">compose</a></li>
+                           <li><a href="inbox.html">inbox</a></li>
+                           <li><a href="mail-read.html">read</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#ui_elements" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-laptop"></i>
+                        UI Elements
+                        </a>
+                        <ul class="collapse list-unstyled" id="ui_elements">
+                           <li><a href="ui_button.html">Button</a></li>
+                           <li><a href="ui_panels.html">Panels</a></li>
+                           <li>
+                              <a href="#icon" data-toggle="collapse" aria-expanded="false">
+                              Icons
+                              </a>
+                              <ul class="collapse list-unstyled" id="icon">
+                                 <li><a href="icon-fontawesome.html">Font awesome</a></li>
+                                 <li><a href="icon-glyphicons.html">Glyphicons</a></li>
+                                 <li><a href="icon-themify.html">Themify Icons</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="ui_tab_accordion.html">Tabs & Accordions</a></li>
+                           <li><a href="ui_sweet_alerts.html">sweet Alerts</a></li>
+                           <li><a href="ui_progressbars.html">Progress bars</a></li>
+                           <li><a href="ui_carousel.html">Carousel</a></li>
+                           <li><a href="ui_breadcrumbs.html">breadcrumbs</a></li>
+                           <li><a href="ui_pagination.html">pagination</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <!-- Menu Section End -->
+                
+               <!-- Menu Section Start -->
+               <div class="menu-section">
+                  <h3>Forms,Table & widget</h3>
+                  <ul class="list-unstyled components">
+                     <li>
+                        <a href="seipcon_widget.html">
+                        <i class="fa fa-th"></i>
+                        Widgets
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#charts" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-pie-chart"></i>
+                        Charts
+                        </a>
+                        <ul class="collapse list-unstyled" id="charts">
+                           <li><a href="chartsjs.html">chart js</a></li>
+                           <li><a href="morrris.html">morris</a></li>
+                           <li><a href="sparkline.html">sparkline</a></li>
+                        </ul>
+                     </li>
+                     <li class="active">
+                        <a href="#forms" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-edit"></i>
+                        Forms
+                        </a>
+                        <ul class="collapse list-unstyled" id="forms">
+                           <li><a href="general-form.html">General Form</a></li>
+                           <li><a href="advance-components.html">Advance Components</a></li>
+                           <li><a href="form-layouts.html">Form layouts</a></li>
+                           <li><a href="form-validation.html">form validation</a></li>
+                           <li class="active"><a href="form-wizards.html">form wizards</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#table" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-table"></i>
+                        Tables
+                        </a>
+                        <ul class="collapse list-unstyled" id="table">
+                           <li><a href="basic-table.html">basic table</a></li>
+                           <li><a href="advance-table.html">table Advance</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <!-- Menu Section End -->
+                
+               <!-- Menu Section Start -->
+               <div class="menu-section">
+                  <h3>Extra components</h3>
+                  <ul class="list-unstyled components">
+                     <li>
+                        <a href="#ex_components" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-book"></i>
+                        Additional Pages
+                        </a>
+                        <ul class="collapse list-unstyled" id="ex_components">
+                           <li><a href="profile.html">profile page</a></li>
+                           <li><a href="invoice.html">Invoice</a></li>
+                           <li><a href="gallery.html">gallery</a></li>
+                           <li><a href="blank.html">Blank</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#ex_authentication" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-unlock-alt"></i>
+                        Authentication 
+                        </a>
+                        <ul class="collapse list-unstyled" id="ex_authentication">
+                           <li><a href="login.html">Login</a></li>
+                           <li><a href="register.html">Register</a></li>
+                           <li><a href="lockscreen.html">Lockscreen</a></li>
+                           <li><a href="recover-pass.html">Recover password</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#ex_error" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-exclamation-circle"></i>
+                        Error Pages 
+                        </a>
+                        <ul class="collapse list-unstyled" id="ex_error">
+                           <li><a href="error-404.html">404 Not Found</a></li>
+                           <li><a href="error-505.html">505 Forbidden</a></li>
+                           <li><a href="error-500.html">500 Internal Server</a></li>
+                           <li><a href="error-503.html">503 Service Unavailable</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#ex_multlable" data-toggle="collapse" aria-expanded="false">
+                        <i class="fa fa-map-signs"></i>
+                        Multilevel
+                        </a>
+                        <ul class="collapse list-unstyled" id="ex_multlable">
+                           <li><a href="#">Level One</a></li>
+                           <li>
+                              <a href="#ex_multlable_2" data-toggle="collapse" aria-expanded="false">
+                              Level One
+                              </a>
+                              <ul class="collapse list-unstyled" id="ex_multlable_2">
+                                 <li><a href="#">Level Two</a></li>
+                                 <li>
+                                    <a href="#ex_multlable_3" data-toggle="collapse" aria-expanded="false">
+                                    Level Two
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="ex_multlable_3">
+                                       <li><a href="#">Level Three</a></li>
+                                       <li><a href="#">Level Three</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li><a href="#">Level One</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <!-- Menu Section End -->
+                
+            </nav>
+         </aside>
+         <!-- End Sidebar -->
+          
+         <!-- Right Side Content Start -->
+         <section id="content" class="seipkon-content-wrapper">
+            <div class="page-content">
+               <div class="container-fluid">
+                   
+                  <!-- Breadcromb Row Start -->
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="breadcromb-area">
+                           <div class="row">
+                              <div class="col-md-6 col-sm-6">
+                                 <div class="seipkon-breadcromb-left">
+                                    <h3>form wizards</h3>
+                                 </div>
+                              </div>
+                              <div class="col-md-6 col-sm-6">
+                                 <div class="seipkon-breadcromb-right">
+                                    <ul>
+                                       <li><a href="index-2.html">home</a></li>
+                                       <li>forms</li>
+                                       <li>form wizards</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End Breadcromb Row -->
+                   
+                  <!-- Form Wizards Row Start -->
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="page-box">
+                           <div class="form-example">
+                              <h3>Basic Form Step Wizards</h3>
+                              <div class="form-wrap">
+                                 <form id="form_wizard_1" class="step-wizard">
+                                    <h3>Personal Information</h3>
+                                    <section>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="firstnam1">First Name :</label>
+                                                <input class="form-control" placeholder="Enter Your First Name" id="firstnam1" type="text">
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="lastnam1">Last Name :</label>
+                                                <input class="form-control" placeholder="Enter Your Last Name" id="lastnam1" type="text">
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="email1">Email Address :</label>
+                                                <input class="form-control" placeholder="Enter Your Email Address" id="email1" type="email">
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="phn1">Phone Number :</label>
+                                                <input class="form-control" placeholder="Enter Your Phone Number" id="phn1" type="text">
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="country">Select City :</label>
+                                                <select class="form-control" id="country">
+                                                   <option value="">Select City</option>
+                                                   <option value="bangladesh">bangladesh</option>
+                                                   <option value="Amsterdam">India</option>
+                                                   <option value="Berlin">USA</option>
+                                                   <option value="Frankfurt">Dubai</option>
+                                                </select>
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="dob">Date of Birth :</label>
+                                                <input class="form-control" id="dob" type="date">
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-12">
+                                                <label class="control-label" for="brief">write a short brief about you</label>
+                                                <textarea class="form-control" id="brief" placeholder="Write Here About You..." ></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </section>
+                                    <h3>Billing Information</h3>
+                                    <section>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="fullnam1">Full Name :</label>
+                                                <input class="form-control" placeholder="Enter Your Full Name" id="fullnam1" type="text">
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="email2">Email Address :</label>
+                                                <input class="form-control" placeholder="Enter Your Email Address" id="email2" type="email">
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="country2">Choose Country :</label>
+                                                <select class="form-control" id="country2">
+                                                   <option value="">Select Country</option>
+                                                   <option value="bangladesh">bangladesh</option>
+                                                   <option value="Amsterdam">India</option>
+                                                   <option value="Berlin">USA</option>
+                                                   <option value="Frankfurt">Dubai</option>
+                                                </select>
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="Town">Town / City :</label>
+                                                <input class="form-control" placeholder="Enter Your Town / City" id="Town" type="text">
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-4 col-sm-4">
+                                                <label class="control-label" for="zip">zip code :</label>
+                                                <input class="form-control" placeholder="Enter Your zip code" id="zip" type="text">
+                                             </div>
+                                             <div class="col-md-4 col-sm-4">
+                                                <label class="control-label" for="Address">Address :</label>
+                                                <input class="form-control" placeholder="Enter Your Full Address" id="Address" type="text">
+                                             </div>
+                                             <div class="col-md-4 col-sm-4">
+                                                <label class="control-label" for="phn3">Phone :</label>
+                                                <input class="form-control" placeholder="Enter Your Phone Number" id="phn3" type="text">
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-12">
+                                                <label class="control-label" for="otdr">Order Note</label>
+                                                <textarea class="form-control" id="otdr" placeholder="Write Here Additional Order Notes" ></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </section>
+                                    <h3>Payment Details</h3>
+                                    <section>
+                                       <div class="row">
+                                          <div class="col-md-6 col-md-offset-3">
+                                             <div class="step-wizard-payment-details table-responsive">
+                                                <table>
+                                                   <tbody>
+                                                      <tr>
+                                                         <td>Cart Subtotal</td>
+                                                         <td>$180</td>
+                                                      </tr>
+                                                      <tr>
+                                                         <td>Shipping and Handling</td>
+                                                         <td>Free Shipping</td>
+                                                      </tr>
+                                                      <tr>
+                                                         <td>Order Total</td>
+                                                         <td>$180</td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                             </div>
+                                             <div class="step-wizard-payment">
+                                                <div class="form-group form-radio">
+                                                   <input id="radio-5" name="radio" type="radio" />
+                                                   <label for="radio-5" class="inline control-label">Direct Bank Transfer</label>
+                                                   <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.order won’t be shipped until the funds have cleared.</p>
+                                                </div>
+                                                <div class="form-group form-radio">
+                                                   <input id="radio-1" name="radio" type="radio" />
+                                                   <label for="radio-1" class="inline control-label">Cheque Payment</label>
+                                                </div>
+                                                <div class="form-group form-radio">
+                                                   <input id="radio-2" name="radio" type="radio" />
+                                                   <label for="radio-2" class="inline control-label">Credit Card</label>
+                                                   <img src="assets/img/master-card.jpg" alt="credit card"  />
+                                                </div>
+                                                <div class="form-group form-radio">
+                                                   <input id="radio-3" name="radio" type="radio" />
+                                                   <label for="radio-3" class="inline control-label">Paypal</label>
+                                                   <img src="assets/img/paypal.jpg" alt="credit card"  />
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </section>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End Form Wizards Row -->
+                   
+                  <!-- Form Wizards Row Start -->
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="page-box">
+                           <div class="form-example">
+                              <h3>Step wizard with validation</h3>
+                              <div class="form-wrap">
+                                 <form id="form_wizard_validation" class="step-wizard">
+                                    <h3>Personal Information</h3>
+                                    <section>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="firstnam55">First Name :</label>
+                                                <input class="form-control" placeholder="Enter Your First Name" id="firstnam55" type="text" required >
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="lastnam56">Last Name :</label>
+                                                <input class="form-control" placeholder="Enter Your Last Name" id="lastnam56" type="text" required >
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="email57">Email Address :</label>
+                                                <input class="form-control" placeholder="Enter Your Email Address" id="email57" type="email" required >
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="phn58">Phone Number :</label>
+                                                <input class="form-control" placeholder="Enter Your Phone Number" id="phn58" type="tel" required >
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="country59">Select City :</label>
+                                                <div id="slWrapper" class="parsley-select wd-250">
+                                                   <select class="form-control" data-placeholder="Choose one" data-parsley-class-handler="#slWrapper" data-parsley-errors-container="#slErrorContainer" id="country59"  required>
+                                                      <option label="Choose one"></option>
+                                                      <option value="India">India</option>
+                                                      <option value="America">America</option>
+                                                      <option value="Indoneshia">Indoneshia</option>
+                                                      <option value="Pakistan">Pakistan</option>
+                                                      <option value="Bangladesh Explorer">Bangladesh</option>
+                                                   </select>
+                                                   <div id="slErrorContainer"></div>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="dob60">Date of Birth :</label>
+                                                <input class="form-control"  id="dob60" type="date" required >
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-12">
+                                                <label class="control-label" for="brief61">write a short brief about you</label>
+                                                <textarea class="form-control" id="brief61" placeholder="Write Here About You..." required ></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </section>
+                                    <h3>Billing Information</h3>
+                                    <section>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="fullnam11">Full Name :</label>
+                                                <input class="form-control" placeholder="Enter Your Full Name" id="fullnam11" type="text" required >
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="email12">Email Address :</label>
+                                                <input class="form-control" placeholder="Enter Your Email Address" id="email12" type="email" required >
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="country13">Choose Country :</label>
+                                                <div id="slWrapper2" class="parsley-select">
+                                                   <select class="form-control" data-placeholder="Choose one" data-parsley-class-handler="#slWrapper2" data-parsley-errors-container="#slErrorContainer2" id="country13"  required>
+                                                      <option label="Choose one"></option>
+                                                      <option value="India">India</option>
+                                                      <option value="America">America</option>
+                                                      <option value="Indoneshia">Indoneshia</option>
+                                                      <option value="Pakistan">Pakistan</option>
+                                                      <option value="Bangladesh Explorer">Bangladesh</option>
+                                                   </select>
+                                                   <div id="slErrorContainer2"></div>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-6 col-sm-6">
+                                                <label class="control-label" for="Town14">Town / City :</label>
+                                                <input class="form-control" placeholder="Enter Your Town / City" id="Town14" type="text" required >
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-4 col-sm-4">
+                                                <label class="control-label" for="zip15">zip code :</label>
+                                                <input class="form-control" placeholder="Enter Your zip code" id="zip15" type="text" required >
+                                             </div>
+                                             <div class="col-md-4 col-sm-4">
+                                                <label class="control-label" for="Address16">Address :</label>
+                                                <input class="form-control" placeholder="Enter Your Full Address" id="Address16" type="text" required >
+                                             </div>
+                                             <div class="col-md-4 col-sm-4">
+                                                <label class="control-label" for="phn17">Phone :</label>
+                                                <input class="form-control" placeholder="Enter Your Phone Number" id="phn17" type="tel" required >
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <div class="row">
+                                             <div class="col-md-12">
+                                                <label class="control-label" for="otdr18">Order Note</label>
+                                                <textarea class="form-control" id="otdr18" placeholder="Write Here Additional Order Notes" required  ></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </section>
+                                    <h3>Payment Details</h3>
+                                    <section>
+                                       <div class="row">
+                                          <div class="col-md-6 col-md-offset-3">
+                                             <div class="step-wizard-payment-details table-responsive">
+                                                <table>
+                                                   <tbody>
+                                                      <tr>
+                                                         <td>Cart Subtotal</td>
+                                                         <td>$180</td>
+                                                      </tr>
+                                                      <tr>
+                                                         <td>Shipping and Handling</td>
+                                                         <td>Free Shipping</td>
+                                                      </tr>
+                                                      <tr>
+                                                         <td>Order Total</td>
+                                                         <td>$180</td>
+                                                      </tr>
+                                                   </tbody>
+                                                </table>
+                                             </div>
+                                             <div class="step-wizard-payment">
+                                                <div class="form-group form-radio">
+                                                   <input id="radio-55" name="radio" type="radio" />
+                                                   <label for="radio-55" class="inline control-label">Direct Bank Transfer</label>
+                                                   <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.order won’t be shipped until the funds have cleared.</p>
+                                                </div>
+                                                <div class="form-group form-radio">
+                                                   <input id="radio-15" name="radio" type="radio" required />
+                                                   <label for="radio-15" class="inline control-label">Cheque Payment</label>
+                                                </div>
+                                                <div class="form-group form-radio">
+                                                   <input id="radio-25" name="radio" type="radio" />
+                                                   <label for="radio-25" class="inline control-label">Credit Card</label>
+                                                   <img src="assets/img/master-card.jpg" alt="credit card"  />
+                                                </div>
+                                                <div class="form-group form-radio">
+                                                   <input id="radio-35" name="radio" type="radio" />
+                                                   <label for="radio-35" class="inline control-label">Paypal</label>
+                                                   <img src="assets/img/paypal.jpg" alt="credit card"  />
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </section>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- End Form Wizards Row -->
+                   
+               </div>
+            </div>
+             
+            <!-- Footer Area Start -->
+            <footer class="seipkon-footer-area">
+               <p>Seipkon - Bootstrap Admin Template by <a href="#">Themescare</a></p>
+            </footer>
+            <!-- End Footer Area -->
+             
+         </section>
+         <!-- End Right Side Content -->
+          
+      </div>
+      <!-- End Wrapper -->
+       
+       
+      <!-- jQuery -->
+      <script src="assets/js/jquery-3.1.0.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+      <!-- Perfect Scrollbar JS -->
+      <script src="assets/plugins/perfect-scrollbar/jquery-perfect-scrollbar.min.js"></script>
+      <!-- Toggles JS -->
+      <script src="assets/plugins/masked-input/js/jquery.maskedinput.min.js"></script>
+      <!-- Select2 JS -->
+      <script src="assets/plugins/select2/js/select2.full.js"></script>
+      <!-- Color Picker JS -->
+      <script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+      <!-- Jquery Steps JS -->
+      <script src="assets/plugins/jquery-steps/js/jquery.steps.min.js"></script>
+      <!-- Jquery parsley JS -->
+      <script src="assets/plugins/parsley/js/parsley.min.js"></script>
+      <!-- Form Wizard Custom JS For Only This Page -->
+      <script src="assets/js/form_wizard_custom.js"></script>
+      <!-- Custom JS -->
+      <script src="assets/js/seipkon.js"></script>
+   </body>
+
+<!-- Mirrored from themescare.com/demos/seipkon-admin-template/form-wizards.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Jul 2018 11:08:48 GMT -->
+</html>
